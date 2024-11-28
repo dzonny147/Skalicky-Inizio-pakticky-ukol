@@ -1,39 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"> <!-- Nastavení kódování -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsivní design -->
-    <title>Google Scraper</title> <!-- Titulek stránky -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Scraper</title>
     <script>
-        // Funkce pro odeslání požadavku na scraping
         async function scrapeResults(event) {
-            event.preventDefault(); // Zabrání přesměrování stránky po odeslání formuláře
-            const keyword = document.getElementById('keyword').value; // Získání klíčového slova z inputu
-
-            // Odeslání POST požadavku na server
+            event.preventDefault();
+            const keyword = document.getElementById('keyword').value;
             const response = await fetch('/scrape', {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' }, // Nastavení hlaviček
-                body: JSON.stringify({ keyword }) // Převod dat do JSON formátu
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ keyword })
             });
-
-            const data = await response.json(); // Parsování odpovědi
-            const downloadLink = document.createElement('a'); // Vytvoření odkazu pro stažení souboru
-            downloadLink.href = data.fileUrl; // Nastavení URL ke stažení
-            downloadLink.download = data.filename; // Nastavení názvu stahovaného souboru
-            downloadLink.textContent = "Download Results"; // Text odkazu
-
-            document.getElementById('results').innerHTML = ''; // Vyčištění starých výsledků
-            document.getElementById('results').appendChild(downloadLink); // Přidání odkazu na stránku
+            const data = await response.json();
+            const downloadLink = document.createElement('a');
+            downloadLink.href = data.fileUrl;
+            downloadLink.download = data.filename;
+            downloadLink.textContent = "Download Results";
+            document.getElementById('results').innerHTML = '';
+            document.getElementById('results').appendChild(downloadLink);
         }
     </script>
 </head>
 <body>
-    <h1>Google Results Scraper</h1> <!-- Nadpis stránky -->
-    <form onsubmit="scrapeResults(event)"> <!-- Formulář pro zadání klíčového slova -->
-        <input type="text" id="keyword" placeholder="Enter keyword" required> <!-- Vstupní pole -->
-        <button type="submit">Scrape</button> <!-- Tlačítko pro odeslání -->
+    <h1>Google Results Scraper</h1>
+    <form onsubmit="scrapeResults(event)">
+        <input type="text" id="keyword" placeholder="Enter keyword" required>
+        <button type="submit">Scrape</button>
     </form>
-    <div id="results"></div> <!-- Div pro zobrazení výsledků -->
+    <div id="results"></div>
 </body>
 </html>
+
