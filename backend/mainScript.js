@@ -32,4 +32,4 @@ app.post('/scrape', async (req, res) => {
 app.use('/output', express.static(path.join(__dirname, '../output')));
 
 // Start serveru
-app.listen(PORT, () => console.log(`Server running on http://localhost:10000:${PORT}`));
+app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
