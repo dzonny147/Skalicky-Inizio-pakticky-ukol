@@ -5,7 +5,7 @@ const { scrapeGoogle } = require('./scraper');
 const { saveResultsToFile } = require('./untils/saveToFile.js');
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 10000;
 
 // Middleware
 app.use(bodyParser.json());
@@ -32,4 +32,4 @@ app.post('/scrape', async (req, res) => {
 app.use('/output', express.static(path.join(__dirname, '../output')));
 
 // Start serveru
-app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
+app.listen(PORT, () => console.log(`Server running on https://dzonny147-github-io.onrender.com:${PORT}`));
