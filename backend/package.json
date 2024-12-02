@@ -1,20 +1,23 @@
-{
-    "name": "nazev-projektu",
+
+  {
+    "name": "google-scraper",
     "version": "1.0.0",
-    "description": "Popis vašeho projektu",
-    "main": "mainScript.js",
+    "description": "Node.js aplikace pro prohledávání google surch a exportování výsledků do json",
+    "main": "src/app.js",
     "scripts": {
-      "start": "node mainScript.js",
-      "build": "echo 'Build process here' && exit 0",
-      "test": "echo 'Run tests here' && exit 0"
+      "start": "node src/mainScript.js",
+      "dev": "nodemon src/mainScript.js"
     },
-    "keywords": [],
-    "author": "Jonas Skalicky",
-    "license": "ISC",
+    "keywords": ["nodejs", "google", "scraping", "puppeteer", "json", "csv"],
+    "author": "Jonáš Skalický",
+    "license": "MIT",
     "dependencies": {
-      "express": "^4.18.2"
+      "express": "^4.18.2",
+      "body-parser": "^1.20.2",
+      "puppeteer": "^21.3.6"
     },
     "devDependencies": {
-      "nodemon": "^2.0.22"
+      "nodemon": "^3.0.1"
     }
   }
+  
