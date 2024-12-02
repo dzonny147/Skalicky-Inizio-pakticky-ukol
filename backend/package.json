@@ -2,9 +2,9 @@
   "name": "package.json",
   "version": "1.0.0",
   "description": "projek pro extrohování výsledků vyhledávání za pomoci googlu do json souboru",
-  "main": "mainScript.js",
+  "main": "backend/mainScript.js",
   "scripts": {
-    "start": "node mainScript.js",
+    "start": "node backend/mainScript.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
