@@ -1,0 +1,26 @@
+{
+    "name": "package.json",
+    "version": "1.0.0",
+    "description": "projek pro extrohování výsledků vyhledávání za pomoci googlu do json souboru",
+    "main": "backend/mainScript.js",
+    "scripts": {
+        "start": "node backend/mainScript.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/dzonny147/dzonny147.github.io.git"
+    },
+    "author": "Jonáš Skalický",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/dzonny147/dzonny147.github.io/issues"
+    },
+    "homepage": "https://github.com/dzonny147/dzonny147.github.io#readme",
+    "dependencies": {
+        "body-parser": "^1.20.3",
+        "express": "^4.21.1",
+        "nodemon": "^3.1.7",
+        "puppeteer": "^23.9.0"
+    }
+}
