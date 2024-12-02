@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
 const { scrapeGoogle } = require('./scraper');
-const { saveResultsToFile } = require('./utils/saveToFile');
+const { saveResultsToFile } = require('./utils/saveToFile.js');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
