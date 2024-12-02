@@ -1,23 +1,25 @@
-
-  {
-    "name": "google-scraper",
-    "version": "1.0.0",
-    "description": "Node.js aplikace pro prohledávání google surch a exportování výsledků do json",
-    "main": "src/app.js",
-    "scripts": {
-      "start": "node src/mainScript.js",
-      "dev": "nodemon src/mainScript.js"
-    },
-    "keywords": ["nodejs", "google", "scraping", "puppeteer", "json", "csv"],
-    "author": "Jonáš Skalický",
-    "license": "MIT",
-    "dependencies": {
-      "express": "^4.21.1",
-      "body-parser": "^1.20.3",
-      "puppeteer": "^20.9.0"
-    },
-    "devDependencies": {
-      "nodemon": "^3.1.7"
-    }
+{
+  "name": "package.json",
+  "version": "1.0.0",
+  "description": "projek pro extrohování výsledků vyhledávání za pomoci googlu do json souboru",
+  "main": "mainScript.js",
+  "scripts": {
+    "start": "node mainScript.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dzonny147/dzonny147.github.io.git"
+  },
+  "author": "Jonáš Skalický",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dzonny147/dzonny147.github.io/issues"
+  },
+  "homepage": "https://github.com/dzonny147/dzonny147.github.io#readme",
+  "dependencies": {
+    "body-parser": "^1.20.3",
+    "express": "^4.21.1",
+    "puppeteer": "^23.9.0"
   }
-  
+}
