@@ -5,9 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Google Scraper</title>
     <script>
+
         async function scrapeResults(event) {
+            //přeruší znovunačtení stránky
             event.preventDefault();
+
             const keyword = document.getElementById('keyword').value;
+
+            //pošle data na server jako json 
             const response = await fetch('https://dzonny147-github-io.onrender.com', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
@@ -29,7 +34,9 @@
         <input type="text" id="keyword" placeholder="Enter keyword" required>
         <button type="submit">Scrape</button>
     </form>
-    <div id="results"></div>
+    <div id="results">
+        <a>Download Results</a>
+    </div>
 </body>
 </html>
 
